@@ -1,0 +1,15 @@
+h4.title {
+  padding:7px !important;
+}
+
+.iconbox {
+  margin-bottom: 5px !important;
+}
+
+
+@media only screen
+and (min-width : 770px) {
+  .big-icon {
+    margin-left: 40px;
+  }
+}

@@ -1,0 +1,95 @@
+<%= render "pages/navbar" %>
+<main id="main">
+
+            <!-- start page title section -->
+            <section class="page-title section dark" style="background-color:#3296c9;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9">
+
+                            <!-- start page title -->
+                            <header class="section-header content-header">
+                                <h1 class="title">The FAQ's</h1>
+                                <p style="color:white;" class="subtitle lead">We get these questions. Frequently.</p>
+                            </header>
+                            <!-- end page title -->
+
+                        </div>
+
+                        <div class="col-27">
+                            <!-- an empty space, you can add image or additional text here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end page title section -->
+
+            <!-- start main content -->
+            <section id="main-content" class="section light">
+
+                <!-- start container -->
+                <div class="container">
+
+                    <!-- start section content -->
+                    <div class="section-content row">
+
+                        <!-- start primary -->
+                        <div id="primary" class="col-9">
+
+                            <!-- start page entry -->
+                            <article class="page-entry">
+                                <dl class="accordion">
+                                    <dt class="accordion-trigger"><i class="fa fa-question"></i> What is a virtual assistant?</dt>
+                                    <dd class="accordion-content">
+                                        <p>Virtual assistants perform the same role that are traditionally done by an in-house executive assistant. Our VA's are often a much better fit for many small companies and business owners (or even families) because they can get the same service at a fraction of the price of a traditional, full-time in-house executive assistant.</p>
+                                    </dd>
+
+                                    <dt class="accordion-trigger"><i class="fa fa-question"></i> What specifically can my assistant do?</dt>
+                                    <dd class="accordion-content">
+                                        <p>It's a long list, check it out <%= link_to "here", what_we_do_path %>.</p>
+                                    </dd>
+
+                                    <dt class="accordion-trigger"><i class="fa fa-question"></i> Will a different person help me with every new task?</dt>
+                                    <dd class="accordion-content">
+                                        <p>No! You get a dedicated assistant. The more you share with them, the more they'll learn how you like to work and be able to anticipate your needs. We help you and your assistant build a long-term relationship so that you'll be comfortable giving them as many tasks as possible.</p>
+                                    </dd>
+
+                                    <dt class="accordion-trigger"><i class="fa fa-question"></i> Can I pick my assistant?</dt>
+                                    <dd class="accordion-content">
+                                        <p>We'll recommend you an assistant based on your specific needs. Once that's done you're welcome to interview them via Skype (or however you like) to see if it's a good fit.</p>
+                                    </dd>
+
+                                    <dt class="accordion-trigger"><i class="fa fa-question"></i> Where will my assistant be located?</dt>
+                                    <dd class="accordion-content">
+                                        <p>All of our assistants are located in the United States and northern Mexico and speak fluent professional English.</p>
+                                    </dd>
+
+                                    <dt class="accordion-trigger"><i class="fa fa-question"></i> Can my assistant work on the weekend?</dt>
+                                    <dd class="accordion-content">
+                                        <p>Our standard hours are Monday - Friday, 8 am - 6 pm. That said, we do sometimes have emergency staff on hand for the weekends. If you have an emergency request <%= link_to "contact us", contact_us_path%> and we'll see what we can do.</p>
+                                    </dd>
+                                </dl>
+
+                                <div class="separator"></div>
+
+                                <h3>Couldn't find your answer?</h3>
+
+                                <p>Send us an email with your question <%= link_to "here", contact_us_path %>, or request a phone call from <%= link_to "a real human", request_phone_call_path %>.</p>
+
+                            </article>
+                            <!-- end page entry -->
+
+                        </div>
+                        <!-- end primary -->
+
+                    </div>
+                    <!-- end section content -->
+
+                </div>
+                <!-- end container -->
+
+            </section>
+            <!-- end main content -->
+
+        </main>
+<%= render "pages/footer" %>

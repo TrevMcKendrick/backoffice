@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backoffice</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+  <%= render "layouts/css_head" %>
+  <%= render "layouts/js_head" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+<%= render "layouts/js_footer" %>
+</body>
+</html>

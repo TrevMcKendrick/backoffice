@@ -1,0 +1,258 @@
+<%= render "pages/navbar" %>
+<main id="main">
+            <!-- start banner -->
+  <section id="banner" class="tp-banner-container section">
+
+      <!-- start rev slider -->
+      <div class="tp-banner" >
+          <ul>
+
+              <!-- slide two -->
+              <li data-transition="boxfade" data-slotamount="5" data-masterspeed="1000">
+
+                  <!-- slide bg -->
+                  <%= image_tag "slide-bg-2.jpg", "data-bgfit" => "cover", "data-bgposition" => "left top", "data-bgrepeat" => "no-repeat"  %>
+
+                  <!-- slide layer 1 -->
+                  <div class="tp-caption sfb"
+                  data-x="-10"
+                  data-y="50"
+                  data-speed="1500"
+                  data-start="800"
+                  data-easing="Back.easeInOut">
+                  <%= image_tag "man.png" %>
+                  </div>
+
+                  <!-- slide layer 2 -->
+                  <div class="tp-caption sfl large-medium-black"
+                  data-x="550"
+                  data-y="130"
+                  data-speed="1500"
+                  data-start="1000"
+                  data-easing="Back.easeInOut">
+                    Amazing Virtual Assistants for<br>
+                    Successful People Like You
+                  </div>
+
+                  <!-- slide layer 3 -->
+                  <div class="tp-caption sfl grey"
+                  data-x="550"
+                  data-y="220"
+                  data-speed="1500"
+                  data-start="1300"
+                  data-easing="Back.easeInOut">
+                      With a dedicated assistant you'll save on time, money and<br> stress. Let us do your busywork for you.<br>
+                  </div>
+
+                  <!-- slide layer 4 -->
+                  <div class="tp-caption sfl"
+                  data-x="550"
+                  data-y="320"
+                  data-speed="1500"
+                  data-start="1600"
+                  data-easing="Back.easeInOut">
+                      <a href="<%= what_we_do_path %>" class="button medium primary">Learn More</a>
+                      <a href="<%= request_invite_path %>" class="button medium white">Request Invite</a>
+                  </div>
+              </li>
+          </ul>
+      </div>
+      <!-- end rev slider -->
+
+      <!-- initialize slider -->
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $('.tp-banner').revolution({
+                  startwidth: 1050,
+                  startheight: 500,
+                  hideThumbs: 10,
+                  fullWidth: 'on',
+                  forceFullWidth: 'on',
+                  videoJsPath:'src/rs-plugin/videojs/'
+              });
+          });
+      </script>
+
+  </section>
+            <!-- end banner -->
+
+            <!-- start section -->
+  <section id="section-services" class="section light">
+
+      <!-- start container -->
+      <div class="container">
+
+          <!-- start section content -->
+          <div class="section-content">
+
+              <!-- start section header -->
+              <header class="content-header section-header text-center">
+                  <h2>We Can Do Your Busywork</h2>
+                  <p class="lead">Your time is valuable. Let us focus on the tedious stuff so you can manage your business.</p>
+              </header>
+              <!-- end section header -->
+
+              <!-- start iconboxes -->
+              <div class="iconboxes row">
+
+                  <!-- iconbox 1 -->
+                  <div class="col-27">
+                      <aside class="iconbox text-center">
+                          <div class="icon circle purple large">
+                              <i class="fa fa-sun-o"></i>
+                          </div>
+                          <div class="iconbox-content">
+                              <h3 class="title">Administrative Assistance</h3>
+                              <p>Anything from updating your CRM to competitive research, we can help you with your busywork.</p>
+                          </div>
+                      </aside>
+                  </div>
+
+                  <!-- iconbox 2 -->
+                  <div class="col-27">
+                      <aside class="iconbox text-center">
+                          <div class="icon circle green large">
+                              <i class="fa fa-globe"></i>
+                          </div>
+                          <div class="iconbox-content">
+                              <h3 class="title">Calendar &amp; Travel Support</h3>
+                              <p>Set appointments and book travel, based on your specific preferences</p>
+                          </div>
+                      </aside>
+                  </div>
+
+                  <!-- iconbox 3 -->
+                  <div class="col-27">
+                      <aside class="iconbox text-center">
+                          <div class="icon circle red large">
+                              <i class="fa fa-dollar"></i>
+                          </div>
+                          <div class="iconbox-content">
+                              <h3 class="title">Billing &amp; Collections</h3>
+                              <p>We'll send invoices and make friendly phone calls to collect on past-due payments.</p>
+                          </div>
+                      </aside>
+                  </div>
+
+                  <!-- iconbox 4 -->
+                  <div class="col-27">
+                      <aside class="iconbox text-center">
+                          <div class="icon circle blue large">
+                              <i class="fa fa-twitter"></i>
+                          </div>
+                          <div class="iconbox-content">
+                              <h3 class="title">Marketing &amp; Social Media Management</h3>
+                              <p>Write press releases, respond on your social media accounts and more.</p>
+                          </div>
+                      </aside>
+                  </div>
+
+              </div>
+              <!-- end iconboxes -->
+
+
+          </div>
+
+
+          <header class="content-header section-header text-center">
+              <p class="lead">See the longer list of what an assistant <a href="<%= what_we_do_path %>">can do for you</a>.</p>
+          </header>
+          <!-- end section content -->
+
+      </div>
+      <!-- end container -->
+
+  </section>
+            <!-- end section -->
+
+            <!-- start section -->
+  <section id="section-teaser" class="section light parallax section-bg-1" data-overlay="#FFFFFF" data-overlay-opacity="0.90">
+
+      <!-- start container -->
+      <div class="container">
+
+          <!-- start section content -->
+          <div class="section-content" style="padding-bottom: 0">
+
+              <!-- start row -->
+              <div class="row">
+                  <div class="col-16">
+                    <%= image_tag "girl.png" %>
+                  </div>
+
+                  <div class="col-20" style="margin-top:100px;">
+                      <div class="clearfix" style="height: 10px;"></div>
+
+                      <h1>You Deserve This</h1>
+
+                      <h5>Whether you're running a business or a family, you know<br>you have better things to do than book yet another flight.<br></h5>
+
+
+                      <div class="row">
+                          <div class="col-18">
+                              <ul class="unstyled">
+                                  <li><i class="fa fa-dot-circle-o"></i> AR Collection</li>
+                                  <li><i class="fa fa-dot-circle-o"></i> Transcribe voice recordings</li>
+                                  <li><i class="fa fa-dot-circle-o"></i> Order/ship gifts</li>
+                                  <li><i class="fa fa-dot-circle-o"></i> Find people's contact info</li>
+                              </ul>
+                          </div>
+                          <div class="col-18">
+                              <ul class="unstyled">
+                                  <li><i class="fa fa-dot-circle-o"></i> Schedule meetings</li>
+                                  <li><i class="fa fa-dot-circle-o"></i> Send invoices</li>
+                                  <li><i class="fa fa-dot-circle-o"></i> Make reservations</li>
+                                  <li><i class="fa fa-dot-circle-o"></i> Manage social media</li>
+                              </ul>
+                          </div>
+                      </div>
+
+                      <p>
+                          <a style="color:white;" href="<%= what_we_do_path %>" class="button medium red"> Learn More</a>
+                      </p>
+                  </div>
+
+              </div>
+              <!-- end row -->
+
+          </div>
+          <!-- end section content -->
+
+      </div>
+      <!-- end container -->
+
+  </section>
+
+  <section id="section-callout" class="section dark" style="background-color:#3296c9;">
+
+      <!-- start container -->
+      <div class="container">
+
+          <!-- start section content -->
+          <div class="section-content">
+
+              <!-- start callout -->
+              <div class="callout">
+                  <div class="callout-text">
+                      <h2>Have more questions? Talk to a real human.</h2>
+                      <p style="color:white;">No obligations, just quick answers.</p>
+                  </div>
+
+                  <div class="callout-button">
+                      <a style="color:black;" href="<%= request_phone_call_path %>" class="button medium yellow"><i class="fa fa-phone"></i> Request Phone Call</a>
+                  </div>
+              </div>
+              <!-- end callout -->
+
+          </div>
+          <!-- end section content -->
+
+      </div>
+      <!-- end container -->
+
+  </section>
+            <!-- end section -->
+
+</main>
+
+<%= render "pages/footer" %>

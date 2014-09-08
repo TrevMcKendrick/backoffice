@@ -35,7 +35,7 @@
         clone.find('.fa').remove();
 
         menu.casanovaMenu();
-        
+
         trigger.insertAfter(menu);
         mobile.append(clone).appendTo(header);
         mobile.children().slicknav({
@@ -53,7 +53,7 @@
             }
             event.preventDefault();
         });
-        
+
     };
 
     /* Portfolio items */
@@ -358,25 +358,25 @@
         el.swipebox();
     };
 
-    casanova.backToTop = function () {
-        var el = $('<div id="back-to-top"><a class="icon square primary" href="#"><i class="fa fa-chevron-up"></i></a></div>');
-
-        $(window).scroll(function () {
-            if ( $(this).scrollTop() > ( $(this).height() / 3 ) ) {
-                el.fadeIn('slow');
-            } else {
-                el.fadeOut('slow');
-            }
-        });
-
-        el.appendTo('body').on('click', function (e) {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 800);
-
-            e.preventDefault();
-        });
-    };
+    // casanova.backToTop = function () {
+    //     var el = $('<div id="back-to-top"><a class="icon square primary" href="#"><i class="fa fa-chevron-up"></i></a></div>');
+    //
+    //     $(window).scroll(function () {
+    //         if ( $(this).scrollTop() > ( $(this).height() / 3 ) ) {
+    //             el.fadeIn('slow');
+    //         } else {
+    //             el.fadeOut('slow');
+    //         }
+    //     });
+    //
+    //     el.appendTo('body').on('click', function (e) {
+    //         $('body,html').animate({
+    //             scrollTop: 0
+    //         }, 800);
+    //
+    //         e.preventDefault();
+    //     });
+    // };
 
     /* Create unique ID */
     casanova.uniqueId = function (type, length) {

@@ -1,5 +1,5 @@
 <%= render "pages/navbar" %>
-<main id="main">
+  <main id="main">
 
             <!-- start page title section -->
             <section class="page-title section dark" style="background-color:#3296c9;">
@@ -8,9 +8,10 @@
                         <div class="col-9">
                             <!-- start page title -->
                             <header class="section-header content-header">
-                                <h1 class="title">What we do – <i>The BackOffice Services</i></h1>
-                                <h4>Your BackOffice Assistant works with our internal team of writers,<br> marketers, receptionists and others to provide you all the<br> BackOffice Services. Think of it as 5 employees all in one.</h4>
-                                <p style="color:white;" >(Want something not listed below? We do new stuff all the time.<%= link_to " Let us know here", contact_us_path, :style => "color:black;"%> </a> or talk to your BackOffice Assistant and we'll work something out.)</p>
+                                <h1 class="title">The BackOffice Services</h1>
+                                <h5>- Your BackOffice Assistant works with our internal team of writers, marketers, receptionists and others to provide you all the BackOffice Services. Think of it as 5 employees all in one.</h5>
+                                <p style="color:white;" >(And we do more than what's just listed below. Not sure if your jobs work? <%= link_to " Ask us here", contact_us_path, :style => "color:black;"%> </a> or in the chat box on the bottom right.)</p>
+                                <p style="color:white;" >- Checkout <%= link_to " tasks we've completed for customers", example_tasks_path, :style => "color:black;"%> just this last week.</p>
                             </header>
                             <!-- end page title -->
                         </div>
@@ -32,6 +33,7 @@
                     <!-- start section content -->
                     <div class="section-content">
 
+                        <br><br>
                         <div class="row">
                             <div class="col-25">
                                 <p><%= image_tag "admin.png" %></p>
@@ -42,8 +44,7 @@
                                     <h2>Administrative Assistance</h2>
                                 </header>
 
-                                <p>Think of this as more of a brainstorm list. In reality, we’ll do whatever we can to make your life (business and personal) better. Just let us know what we can help with!
-</p>
+                                <p>Think of this as more of a brainstorm list. In reality, we’ll do whatever we can to make your life (business and personal) better. Just let us know what we can help with!</p>
 
                                 <div class="iconboxes">
                                     <aside class="iconbox text-left">
@@ -60,7 +61,7 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="iconbox-content">
-                                            <h4 class="title list-item">Google Docs Tasks</h4>
+                                            <h4 class="title list-item">Research your competitors</h4>
                                         </div>
                                     </aside>
 
@@ -105,7 +106,7 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="iconbox-content">
-                                            <h4 class="title list-item">Type up your hand written notes</h4>
+                                            <h4 class="title list-item">Research bookkeepers, lawyers, and other professionals</h4>
                                         </div>
                                     </aside>
 
@@ -114,23 +115,90 @@
                         </div>
                         <br><br>
 
+
 <div style="text-align:center;">
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</div>
+                      <br><br>
+                      <div class="row">
+                          <div class="col-25">
+                              <p><%= image_tag "cloud.png" %></p>
+                          </div>
+
+                          <div class="col-20 big-icon">
+                              <header class="content-header v3">
+                                  <h2>Website Assistance</h2>
+                              </header>
+
+                              <p>Stop messing with your website and just let us fix it. We can do all the basic tasks that suck away your valuable time. If something is outside of our scope, we know a ton of great developers who can help, too.</p>
+
+                              <div class="iconboxes">
+                                  <aside class="iconbox text-left">
+                                      <div class="icon circle primary">
+                                          <i class="fa fa-check"></i>
+                                      </div>
+                                      <div class="iconbox-content">
+                                          <h4 class="title list-item">Wordpress theme installation and setup</h4>
+                                      </div>
+                                  </aside>
+
+                                  <aside class="iconbox text-left">
+                                      <div class="icon circle primary">
+                                          <i class="fa fa-check"></i>
+                                      </div>
+                                      <div class="iconbox-content">
+                                          <h4 class="title list-item">Purchase and setup hosting</h4>
+                                      </div>
+                                  </aside>
+
+                                  <aside class="iconbox text-left">
+                                      <div class="icon circle primary">
+                                          <i class="fa fa-check"></i>
+                                      </div>
+                                      <div class="iconbox-content">
+                                          <h4 class="title list-item">Write and publish posts and other content</h4>
+                                      </div>
+                                  </aside>
+
+                                  <aside class="iconbox text-left">
+                                      <div class="icon circle primary">
+                                          <i class="fa fa-check"></i>
+                                      </div>
+                                      <div class="iconbox-content">
+                                          <h4 class="title list-item">Setup your email list</h4>
+                                      </div>
+                                  </aside>
+
+                                  <aside class="iconbox text-left">
+                                      <div class="icon circle primary">
+                                          <i class="fa fa-check"></i>
+                                      </div>
+                                      <div class="iconbox-content">
+                                          <h4 class="title list-item">Format, write, and send your newsletters</h4>
+                                      </div>
+                                  </aside>
+
+                              </div>
+                          </div>
+                      </div>
+                      <br><br>
+
+<div style="text-align:center;">
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 </div>
 
                         <br><br>
                         <div class="row">
                             <div class="col-25">
-
-                                <p><%= image_tag "cal.png" %></p>
+                                <p><%= image_tag "phone.png" %></p>
                             </div>
 
                             <div class="col-20 big-icon">
                                 <header class="content-header v3">
-                                    <h2>Calendar Help &amp; Travel Planning</h2>
+                                    <h2>Receptionist for inbound/outbound calls</h2>
                                 </header>
 
-                                <p>Need to book a trip? Trying to schedule a meeting with four other people? An assistant can do that all for you. What about dinner reservations? Yeah, we can research the best places and book the reservation, too.</p>
+                                <p>Need someone to take orders over the phone but don't want to pay someone sitting in-between calls? Use BackOffice, and only pay for the minutes we're actually on the phone. We learn your business and, if you like, will act as a member of your company.</p>
 
                                 <div class="iconboxes">
                                     <aside class="iconbox text-left">
@@ -138,7 +206,7 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="iconbox-content">
-                                            <h4 class="title list-item">Book your flights, hotels, and car rentals<br> (with your preferred vendors)</h4>
+                                            <h4 class="title list-item">Take customer phone orders</h4>
                                         </div>
                                     </aside>
 
@@ -147,7 +215,7 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="iconbox-content">
-                                            <h4 class="title list-item">Schedule meetings</h4>
+                                            <h4 class="title list-item">Answer customer questions and provide support</h4>
                                         </div>
                                     </aside>
 
@@ -156,7 +224,7 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="iconbox-content">
-                                            <h4 class="title list-item">Make dinner reservations</h4>
+                                            <h4 class="title list-item">Schedule appointments with inbound leads</h4>
                                         </div>
                                     </aside>
 
@@ -165,7 +233,7 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="iconbox-content">
-                                            <h4 class="title list-item">Confirm meeting details</h4>
+                                            <h4 class="title list-item">Make follow up calls to new customers</h4>
                                         </div>
                                     </aside>
 
@@ -175,9 +243,9 @@
                     </div>
                     <br>
 
-<div style="text-align:center;">
+<!-- <div style="text-align:center;">
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-</div>
+</div> -->
 
                         <br><br>
                         <div class="row">
@@ -190,8 +258,7 @@
                                     <h2>Billing &amp; Collections</h2>
                                 </header>
 
-                                <p>You have invoices that are past due but (rightly so) don’t want to be the bad guy collecting them. That’s fine. Let us make friendly phone calls and get in touch with your outstanding clients. We’ll represent your brand well, and you won’t have to bug your clients.
-</p>
+                                <p>You have invoices that are past due but (rightly so) don’t want to be the bad guy collecting them. That’s fine. Let us make friendly phone calls and get in touch with your outstanding clients. We’ll represent your brand well, and you won’t have to bug your clients.</p>
 
                                 <div class="iconboxes">
                                     <aside class="iconbox text-left">
@@ -217,7 +284,16 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="iconbox-content">
-                                            <h4 class="title list-item">Expense reports</h4>
+                                            <h4 class="title list-item">Create expense reports</h4>
+                                        </div>
+                                    </aside>
+
+                                    <aside class="iconbox text-left">
+                                        <div class="icon circle primary">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <h4 class="title list-item">Collect payment online/over the phone</h4>
                                         </div>
                                     </aside>
 
@@ -248,7 +324,7 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="iconbox-content">
-                                            <h4 class="title list-item">Proofread and schedule blog posts</h4>
+                                            <h4 class="title list-item">Write and schedule blog posts</h4>
                                         </div>
                                     </aside>
 
@@ -257,7 +333,7 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="iconbox-content">
-                                            <h4 class="title list-item">Write press releases</h4>
+                                            <h4 class="title list-item">Compose press releases</h4>
                                         </div>
                                     </aside>
 
@@ -279,11 +355,81 @@
                                         </div>
                                     </aside>
 
+                                    <aside class="iconbox text-left">
+                                        <div class="icon circle primary">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <h4 class="title list-item">Connect with people you meet at conferences</h4>
+                                        </div>
+                                    </aside>
+
                                 </div>
                             </div>
                         </div>
 
                         <br><br>
+
+                        <div style="text-align:center;">
+                          - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                        </div>
+
+                          <br><br>
+                          <div class="row">
+                              <div class="col-25">
+
+                                  <p><%= image_tag "cal.png" %></p>
+                              </div>
+
+                              <div class="col-20 big-icon">
+                                  <header class="content-header v3">
+                                      <h2>Calendar Management &amp; Travel Planning</h2>
+                                  </header>
+
+                                  <p>Need to book a trip? Trying to schedule a meeting with four other people? An assistant can do that all for you. What about dinner reservations? Yeah, we can research the best places and book the reservation, too.</p>
+
+                                  <div class="iconboxes">
+                                      <aside class="iconbox text-left">
+                                          <div class="icon circle primary">
+                                              <i class="fa fa-check"></i>
+                                          </div>
+                                          <div class="iconbox-content">
+                                              <h4 class="title list-item">Book your flights, hotels, and car rentals<br> (with your preferred vendors)</h4>
+                                          </div>
+                                      </aside>
+
+                                      <aside class="iconbox text-left">
+                                          <div class="icon circle primary">
+                                              <i class="fa fa-check"></i>
+                                          </div>
+                                          <div class="iconbox-content">
+                                              <h4 class="title list-item">Schedule meetings</h4>
+                                          </div>
+                                      </aside>
+
+                                      <aside class="iconbox text-left">
+                                          <div class="icon circle primary">
+                                              <i class="fa fa-check"></i>
+                                          </div>
+                                          <div class="iconbox-content">
+                                              <h4 class="title list-item">Make dinner reservations</h4>
+                                          </div>
+                                      </aside>
+
+                                      <aside class="iconbox text-left">
+                                          <div class="icon circle primary">
+                                              <i class="fa fa-check"></i>
+                                          </div>
+                                          <div class="iconbox-content">
+                                              <h4 class="title list-item">Add meetings and travel to your calendar (and remind you about events)</h4>
+                                          </div>
+                                      </aside>
+
+                                  </div>
+                              </div>
+                          </div>
+
+                      <br>
                     </div>
                     <!-- end section content -->
 
@@ -301,7 +447,7 @@
                               <div class="callout">
                                   <div class="callout-text">
                                       <h2>Ready to get started?</h2>
-                                      <p style="color:white;">All plans come with a 14-day money-back guarantee</p>
+                                      <p style="color:white;">All plans start with a 7-day free trial</p>
                                   </div>
 
                                   <div class="callout-button">

@@ -20,4 +20,7 @@ class PagesController < ApplicationController
   def request_invite
   end
 
+  def example_tasks
+  end
+
 end

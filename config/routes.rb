@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'request-phone-call' => 'pages#request_phone_call'
   get 'request-invite' => 'pages#request_invite'
   get 'example-tasks' => 'pages#example_tasks'
+  get 'jobs' => 'pages#jobs'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'request-invite' => 'pages#request_invite'
   get 'example-tasks' => 'pages#example_tasks'
   get 'jobs' => 'pages#jobs'
+  get 'google-calendar-sharing' => 'pages#google_calendar_sharing'
+  get 'email-delegation-google' => 'pages#email_delegation_google'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -23,4 +23,10 @@ class PagesController < ApplicationController
   def example_tasks
   end
 
+  def google_calendar_sharing
+  end
+
+  def email_delegation_google
+  end
+
 end

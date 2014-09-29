@@ -29,4 +29,7 @@ class PagesController < ApplicationController
   def email_delegation_google
   end
 
+  def brainstorm_triggers
+  end
+
 end

@@ -13,9 +13,8 @@ Rails.application.routes.draw do
   get 'email-delegation-google' => 'pages#email_delegation_google'
   get 'brainstorm-triggers' => 'pages#brainstorm_triggers'
 
-  constraints Constraints::CustomSubdomain do
-    get '(*path)' => 'application#blog', :constraints => {subdomain: 'blog'}
-  end
+  get '(*path)' => 'application#blog', :constraints => {subdomain: 'blog'}
+
 
   get '/blog' => redirect("http://trybackoffice.com/blog/")
 

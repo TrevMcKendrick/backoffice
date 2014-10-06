@@ -13,13 +13,10 @@ Rails.application.routes.draw do
   get 'email-delegation-google' => 'pages#email_delegation_google'
   get 'brainstorm-triggers' => 'pages#brainstorm_triggers'
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  constraints Constraints::CustomSubdomain do
+    get '(*path)' => 'application#blog', :constraints => {subdomain: 'blog'}
+  end
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get '/blog' => redirect("http://trybackoffice.com/blog/")
 
 end

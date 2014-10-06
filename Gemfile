@@ -45,4 +45,6 @@ gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
 
+gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy'
+
 ruby "2.0.0"

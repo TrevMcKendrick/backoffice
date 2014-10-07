@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def blog
-    redirect_to "http://trybackoffice.com.com/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
+    redirect_to "http://www.trybackoffice.com/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
+    # redirect_to "lvh.me:3000/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
   end
 end

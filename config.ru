@@ -2,10 +2,10 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 
-# use Rack::ReverseProxy do
-#   reverse_proxy_options preserve_host: true
-#
-#   reverse_proxy /^\/blog(\/.*)$/, 'http://backoffice.flywheelsites.com$1', :username => 'flywheel', :password => 'tender-move', :timeout => 500
-# end
+use Rack::ReverseProxy do
+  reverse_proxy_options preserve_host: false
+
+  reverse_proxy /^\/blog(\/.*)$/, 'http://backoffice.flywheelsites.com$1', :username => 'flywheel', :password => 'tender-move', :timeout => 500
+end
 
 run Rails.application

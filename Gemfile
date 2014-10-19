@@ -8,6 +8,8 @@ gem 'sqlite3', :group => "development"
 gem 'pry', :group => "development"
 gem 'pg', :group => "production"
 
+gem 'rack-ssl-enforcer'
+
 gem 'newrelic_rpm'
 
 # Use SCSS for stylesheets

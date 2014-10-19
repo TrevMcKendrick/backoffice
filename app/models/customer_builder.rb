@@ -15,13 +15,13 @@ class CustomerBuilder
   end
 
   def save_customer(customer)
-    saved_customer = Customer.create(
+    new_customer = Customer.new(
     :first_name => self.first_name,
     :last_name => self.last_name,
     :email => self.email,
     :stripe_id => customer.id
     )
-    saved_customer
+    new_customer
   end
 
 end

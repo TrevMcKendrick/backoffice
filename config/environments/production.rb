@@ -43,7 +43,7 @@ Rails.application.configure do
 
   config.middleware.use Rack::SslEnforcer
 
-  config.middleware.use Rack::SslEnforcer, :except => '/blog'
+  config.middleware.use Rack::SslEnforcer, :except => '/blog/'
 
   # Set to :debug to see everything in the log.
   config.log_level = :info

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'customers/create'
+
   root 'pages#home'
   get 'faq' => 'pages#faq'
   get 'what-we-do' => 'pages#what_we_do'
@@ -12,11 +14,13 @@ Rails.application.routes.draw do
   get 'google-calendar-sharing' => 'pages#google_calendar_sharing'
   get 'email-delegation-google' => 'pages#email_delegation_google'
   get 'brainstorm-triggers' => 'pages#brainstorm_triggers'
+  get 'customer-info' => 'pages#customer_info'
 
   get '(*path)' => 'application#blog', :constraints => {subdomain: 'blog'}
   #
   get '/blog' => redirect("http://www.trybackoffice.com/blog/")
   # get '/blog' => redirect("lvh.me:3000/blog/")
 
+  post '/customers/create' => "customers#create"
 
 end

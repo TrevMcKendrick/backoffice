@@ -1,0 +1,52 @@
+<%= render "pages/navbar" %>
+<main id="main">
+
+            <!-- start page title section -->
+            <section class="page-title section dark" style="background-color:#3296c9;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9">
+                        </div>
+
+                        <div class="col-27">
+                            <!-- an empty space, you can add image or additional text here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end page title section -->
+
+            <!-- start section -->
+
+            <section class="section light">
+
+                <!-- start container -->
+                <div class="container">
+
+                    <!-- start section content -->
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-12">
+                              <p class="notice"><%= notice %></p>
+                              <p class="alert"><%= alert %></p>
+                              <%= render "pages/stripe_payment_form" %>
+                            </div>
+
+                            <div class="col-24">
+                                <h4>We securely store all credit card info with Stripe</h4>
+                                    <h6>Certified PCI level 1 (the strictest level of certification)</h6>
+                                    <h6>All cards encrypted on disk with AES-256</h6>
+                                    <h6>All data communicated through secure SSL connections</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end section content -->
+
+                </div>
+                <!-- end container -->
+
+            </section>
+            <!-- end section -->
+
+        </main>
+<%= render "pages/footer" %>

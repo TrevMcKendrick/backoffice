@@ -32,4 +32,7 @@ class PagesController < ApplicationController
   def brainstorm_triggers
   end
 
+  def customer_info
+  end
+
 end

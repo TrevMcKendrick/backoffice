@@ -8,7 +8,6 @@ class CustomerBuilder
     @last_name = hash[:last_name]
     @email = hash[:email]
     @company = hash[:company]
-    binding.pry
   end
 
   def with_token(token)

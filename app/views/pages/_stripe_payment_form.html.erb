@@ -1,6 +1,27 @@
 <%= form_tag url_for(:method => "post", :controller => "customers", :action => "create"), :id => "payment-form"%>
 <span class="payment-errors"></span>
+<h3>Your Info</h3>
+<div class="form-row">
+  <%= label_tag :first_name, nil %>
+  <%= text_field_tag "customer[first_name]", nil, :size => "20", :style => "margin-top:10px;" %>
+</div>
 
+<div class="form-row">
+  <%= label_tag :last_name, nil %>
+  <%= text_field_tag "customer[last_name]", nil, :size => "20", :style => "margin-top:10px;" %>
+</div>
+
+<div class="form-row">
+  <%= label_tag :email, nil %>
+  <%= text_field_tag "customer[email]", nil, :size => "20", :style => "margin-top:10px;" %>
+</div>
+
+<div class="form-row">
+  <%= label_tag :company_name, nil %>
+  <%= text_field_tag "customer[company]", nil, :size => "20", :style => "margin-top:10px;" %>
+</div>
+<br><br>
+<h3>Payment Details</h3>
 <div class="form-row">
   <%= label_tag :card_number, nil %>
   <%= text_field_tag "customer[card_number]", nil, :"data-stripe" => "number", :size => "20", :style => "margin-top:10px;" %>
@@ -15,7 +36,7 @@
   <%= label_tag "Expiration date", nil %>
   <%= select_month nil, {add_month_numbers: true}, {name: "customer[month_exp]", id: "card_month", :data => {:stripe => 'exp-month' } } %>
   <%= label_tag "", nil %>
-  <%= select_year nil, {start_year: 2015, end_year: Date.today.year+10}, {name: "customer[year_exp]", id: "card_year", :data => {:stripe => 'exp-year' } } %>
+  <%= select_year nil, {start_year: 2014, end_year: Date.today.year+10}, {name: "customer[year_exp]", id: "card_year", :data => {:stripe => 'exp-year' } } %>
 </div>
 <br>
-<%= button_tag "Submit Credit Card Info", :style => "border: black 1px solid;" %>
+<%= button_tag "Start Saving Time with BackOffice", :style => "border: black 1px solid;" %>

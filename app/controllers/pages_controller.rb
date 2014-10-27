@@ -35,4 +35,6 @@ class PagesController < ApplicationController
   def customer_info
   end
 
+  def calendar_instructions_barbara
+  end
 end

@@ -1,7 +1,6 @@
 class MoveStripeIdColumnToCompanies < ActiveRecord::Migration
   def change
-    Customer.reset_column_information
-    Company.reset_column_information
+    add_column :companies, :stripe_id, :string
 
     Customer.all.each do |customer|
       customer.company.stripe_id = customer.stripe_id

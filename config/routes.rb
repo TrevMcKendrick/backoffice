@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   get '(*path)' => 'application#blog', :constraints => {subdomain: 'blog'}
   #
   get '/blog' => redirect("http://www.trybackoffice.com/blog/")
-  # get '/blog' => redirect("lvh.me:3000/blog/")
 
   post '/customers/create' => "customers#create"
 

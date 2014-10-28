@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
-  namespace :employees do
-    root to: "employees#index"
-  end
-
   root 'pages#home'
 
   devise_for :employees
 
+  get 'workspaces' => 'workspaces#show'
   get 'faq' => 'pages#faq'
   get 'what-we-do' => 'pages#what_we_do'
   get 'pricing' => 'pages#pricing'

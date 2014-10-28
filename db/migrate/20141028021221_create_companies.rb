@@ -9,6 +9,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :zipcode
       t.string :country
       t.string :main_phone
+      t.string :stripe_id
 
       t.timestamps
     end

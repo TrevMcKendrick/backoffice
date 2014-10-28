@@ -1,0 +1,39 @@
+<%= render "layouts/employee/sign_in_or_up_header" %>
+  <section class="section light">
+
+      <!-- start container -->
+      <div class="container">
+
+          <!-- start section content -->
+          <div class="section-content">
+              <div class="row">
+                  <div class="col-5">
+
+                  <h2>Employee Sign in</h2>
+
+                  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                    <div><%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true %></div>
+                    <br>
+                    <div><%= f.label :password %><br />
+                      <%= f.password_field :password, autocomplete: "off" %></div>
+
+                    <% if devise_mapping.rememberable? -%>
+                      <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+                    <% end -%>
+
+                    <div><%= f.submit "Sign in" %></div>
+                  <% end %>
+
+                  </div>
+
+              </div>
+          </div>
+          <!-- end section content -->
+
+      </div>
+      <!-- end container -->
+
+  </section>
+
+<%= render "layouts/employee/sign_in_or_up_footer" %>

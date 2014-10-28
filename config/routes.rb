@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-
-  devise_for :employees
-  get 'customers/create'
+  namespace :employees do
+    root to: "employees#index"
+  end
 
   root 'pages#home'
+
+  devise_for :employees
+
   get 'faq' => 'pages#faq'
   get 'what-we-do' => 'pages#what_we_do'
   get 'pricing' => 'pages#pricing'

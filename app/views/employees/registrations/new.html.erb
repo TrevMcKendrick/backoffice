@@ -1,0 +1,37 @@
+<%= render "layouts/employee/sign_in_or_up_header" %>
+<section class="section light">
+
+    <!-- start container -->
+    <div class="container">
+
+        <!-- start section content -->
+        <div class="section-content">
+            <div class="row">
+                <div class="col-5">
+
+          <h2>Employee Sign up</h2>
+
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div><%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %></div><br>
+
+            <div><%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off" %></div>
+
+            <div><%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off" %></div><br>
+
+            <div><%= f.submit "Sign up" %></div>
+          <% end %>
+
+                </div>
+
+            </div>
+          </div>
+
+</div>
+
+
+<%= render "layouts/employee/sign_in_or_up_footer" %>

@@ -7,6 +7,7 @@ gem 'rails', '4.1.2'
 gem 'sqlite3', :group => "development"
 gem 'pry', :group => "development"
 gem 'pg', :group => "production"
+gem 'devise'
 
 gem 'rack-ssl-enforcer'
 

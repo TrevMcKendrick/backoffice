@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :employees
   get 'customers/create'
 
   root 'pages#home'

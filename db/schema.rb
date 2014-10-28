@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028022224) do
+ActiveRecord::Schema.define(version: 20141028025655) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(version: 20141028022224) do
     t.string   "main_phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "customers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "stripe_id"
+    t.integer  "company_id"
   end
 
   create_table "employees", force: true do |t|
@@ -45,14 +55,5 @@ ActiveRecord::Schema.define(version: 20141028022224) do
 
   add_index "employees", ["email"], name: "index_employees_on_email", unique: true
   add_index "employees", ["reset_password_token"], name: "index_employees_on_reset_password_token", unique: true
-
-  create_table "users", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "stripe_id"
-  end
 
 end

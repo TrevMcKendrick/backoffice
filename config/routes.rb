@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'request-phone-call' => 'pages#request_phone_call'
   get 'request-invite' => 'pages#request_invite'
   get 'example-tasks' => 'pages#example_tasks'
-  get 'jobs' => 'pages#jobs'
+  get 'careers' => 'pages#careers'
   get 'google-calendar-sharing' => 'pages#google_calendar_sharing'
   get 'email-delegation-google' => 'pages#email_delegation_google'
   get 'brainstorm-triggers' => 'pages#brainstorm_triggers'

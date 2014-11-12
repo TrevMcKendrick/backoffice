@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root 'pages#home'
 
+  root 'pages#home'
+  
+  devise_for :users
   devise_for :employees
 
   get 'workspaces' => 'workspaces#show'

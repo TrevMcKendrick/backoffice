@@ -9,8 +9,6 @@
 
 Customer.create(:first_name => "Chris", :company_id => "1")
 Customer.create(:first_name => "Breanna", :company_id => "2")
-Customer.create(:first_name => "Barbara", :company_id => "3")
 
-Company.create(:name => "SuperMegaUltraGroovy", :id => "1")
-Company.create(:name => "Breanna McKendrick Photography", :id => "2")
-Company.create(:name => "RobinsonBurnett and Associates", :id => "3")
+Company.create(:name => "SuperMegaUltraGroovy", :id => "1", :stripe_id => "cus_58mDrNl1F4P4D4")
+Company.create(:name => "Breanna McKendrick Photography", :id => "2", :stripe_id => "cus_58mDV6WbwbGr7g")

@@ -1,3 +1,5 @@
 <%= render "layouts/header" %>
-It's working
+<% @customers.all.each do |customer| %>
+  <%= "#{customer.company.name} Subscription resets #{readable_date(customer.company.subscription.current_period_end)}" %><br>
+<% end %>
 <%= render "layouts/footer" %>

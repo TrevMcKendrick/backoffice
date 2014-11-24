@@ -7,6 +7,7 @@ gem 'rails', '4.1.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', :group => "development"
 gem 'pry', :group => "development"
+gem 'awesome_print', :group => "development"
 gem 'pg', :group => "production"
 gem 'devise'
 

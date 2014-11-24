@@ -2,9 +2,9 @@
 <div style="margin-left: 10px;">
 	<% @customers.all.each do |customer| %>
 	  <h3><%= "#{customer.company.name}" %></h2>
-	  <%= "Resets #{readable_date(customer.company.subscription.current_period_end)}" %><br>
-	  <%= "Plan is #{customer.company.subscription.size} hours" %><br>
-	  <%= "Has used #{customer.company.subscription.hours_used(unix_to_toggl(customer.company.subscription.current_period_start), unix_to_toggl(customer.company.subscription.current_period_end))} hours" %><br>
+	  <%= "Resets #{readable_date(customer.company.subscription.try(:current_period_end))}" %><br>
+	  <%= "Plan is #{customer.company.subscription.try(:size)} hours" %><br>
+	  <%#= "Has used #{customer.company.subscription.hours_used(unix_to_toggl(customer.company.subscription.current_period_start), unix_to_toggl(customer.company.subscription.current_period_end))} hours" %><br>
 	  <br><br>
 	<% end %>
 <div>

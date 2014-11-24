@@ -18,8 +18,8 @@ class Subscription < ActiveRecord::Base
     ms == nil ? 0 : milliseconds_to_hours(ms) 
   end
 
-  def hours_remaining
-    size - hours_used
+  def hours_remaining(since, ended)
+    size - hours_used(since, ended)
   end
 
   private

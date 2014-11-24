@@ -15,3 +15,5 @@ Company.create(:name => "Breanna Photography", :id => "2", :stripe_id => "cus_58
 
 Subscription.create(:company_id => "1")
 Subscription.create(:company_id => "2")
+
+Employee.create(:email => "trevor@gmail.com", :password => "test")

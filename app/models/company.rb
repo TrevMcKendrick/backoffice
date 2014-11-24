@@ -7,6 +7,6 @@ class Company < ActiveRecord::Base
   end
 
   def toggl_id
-  	read_attribute(:toggl_id) || TogglRequester.new.client_id(self.name)
+  	read_attribute(:toggl_id) || update(:toggl_id => TogglRequester.new.client_id(self.name))
   end
 end

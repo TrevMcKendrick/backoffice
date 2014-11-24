@@ -2,7 +2,7 @@
 <% @customers.all.each do |customer| %>
   <%= "#{customer.company.name} Subscription resets #{readable_date(customer.company.subscription.current_period_end)}" %><br>
   <%= "#{customer.company.name}'s subscription is #{customer.company.subscription.size} hours" %><br>
-  <%= "#{customer.company.name} has so far used #{customer.company.subscription.hours_remaining} hours" %><br>
+  <%= "#{customer.company.name} has so far used #{customer.company.subscription.hours_used(unix_to_toggl(customer.company.subscription.current_period_start), unix_to_toggl(customer.company.subscription.current_period_end))} hours" %><br>
   <br>
 <% end %>
 <%= render "layouts/footer" %>

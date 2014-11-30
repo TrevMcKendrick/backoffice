@@ -1,6 +1,6 @@
 class TogglRequester
 
-  attr_accessor :user_agent, :workspace_id, :since, :until, :billable, :client_ids, :client_name, :project_ids, :user_ids, :display_hours, :grouping, :subgrouping, :page
+  attr_accessor :user_agent, :workspace_id, :since, :until, :billable, :client_ids, :client_name, :project_ids, :user_ids, :display_hours, :grouping, :subgrouping, :page, :rounding
 
   def initialize(options = {})
     self.user_agent = TOGGL_USER_AGENT
@@ -16,10 +16,11 @@ class TogglRequester
     self.grouping = options[:grouping] || 'clients'
     self.subgrouping = options[:subgrouping] || 'time_entries'
     self.page = options[:page] || 1
+    self.rounding = 'on'
   end
 
   def detail_request
-    HTTParty.get(details_uri, :query => { "user_agent" => self.user_agent, "workspace_id" => self.workspace_id, "since" => self.since, "until" => self.until, "billable" => self.billable, "client_ids" => self.client_ids, "project_ids" => self.project_ids, "user_ids" => self.user_ids, "display_hours" => self.display_hours }, :basic_auth => {:username => Rails.application.secrets.toggl_key, :password => "api_token"}, :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json' })
+    HTTParty.get(details_uri, :query => { "user_agent" => self.user_agent, "workspace_id" => self.workspace_id, "since" => self.since, "until" => self.until, "billable" => self.billable, "client_ids" => self.client_ids, "project_ids" => self.project_ids, "user_ids" => self.user_ids, "display_hours" => self.display_hours, "rounding" => self.rounding }, :basic_auth => {:username => Rails.application.secrets.toggl_key, :password => "api_token"}, :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json' })
   end
 
   # def summary_request

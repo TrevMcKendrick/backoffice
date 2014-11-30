@@ -8,9 +8,7 @@ class TogglRequester
     self.since = options[:since] || (Date.today-364).to_s
     self.until = options[:until] || Date.today.to_s
     self.billable = options[:billable] || 'both'
-    # self.client_ids = options[:client_ids] || 0
     self.client_ids = ["#{client_id(options[:client_name])}"]
-    # self.project_ids = options[:project_ids] || 0
     self.user_ids = options[:user_ids] || ''
     self.display_hours = options[:display_hours] || 'minutes'
     self.grouping = options[:grouping] || 'clients'
@@ -22,10 +20,6 @@ class TogglRequester
   def detail_request
     HTTParty.get(details_uri, :query => { "user_agent" => self.user_agent, "workspace_id" => self.workspace_id, "since" => self.since, "until" => self.until, "billable" => self.billable, "client_ids" => self.client_ids, "project_ids" => self.project_ids, "user_ids" => self.user_ids, "display_hours" => self.display_hours, "rounding" => self.rounding }, :basic_auth => {:username => Rails.application.secrets.toggl_key, :password => "api_token"}, :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json' })
   end
-
-  # def summary_request
-  #   HTTParty.get(details_uri, :query => { "user_agent" => self.user_agent, "workspace_id" => self.workspace_id, "since" => self.since, "until" => self.until, "billable" => self.billable, "client_ids" => self.client_ids, "project_ids" => self.project_ids, "user_ids" => self.user_ids, "display_hours" => self.display_hours, "grouping" => self.grouping, "subgrouping" => self.subgrouping }, :basic_auth => {:username => Rails.application.secrets.toggl_key, :password => "api_token"}, :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json' })
-  # end
 
   def clients_request
     HTTParty.get(clients_uri, :query => { "user_agent" => self.user_agent, "workspace_id" => self.workspace_id }, :basic_auth => {:username => Rails.application.secrets.toggl_key, :password => "api_token"}, :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json' })
@@ -51,10 +45,6 @@ class TogglRequester
     "https://toggl.com/reports/api/v2/details?"
   end
 
-  # def summary_uri
-  #   "https://toggl.com/reports/api/v2/summary?"
-  # end
-
   def clients_uri
     "https://www.toggl.com/api/v8/clients"
   end
@@ -62,6 +52,5 @@ class TogglRequester
   def parsed_response
     detail_request.parsed_response
   end
-
 
 end

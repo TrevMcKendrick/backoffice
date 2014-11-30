@@ -5,13 +5,12 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     case resource
-      when Employee then workspaces_url
+      when Employee then workspaces_path
     end
   end
 
   def blog
     redirect_to "http://www.trybackoffice.com/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
   end
-
 
 end

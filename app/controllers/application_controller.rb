@@ -4,10 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
-  case resource
-    when Employee then workspaces_path 
+    case resource
+      when Employee then workspaces_url
+    end
   end
-end
 
   def blog
     redirect_to "http://www.trybackoffice.com/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
